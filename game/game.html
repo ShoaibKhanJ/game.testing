@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinorush Play</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="theme-dark">
+  <div class="game-wrapper">
+    <!-- HUD -->
+    <div class="hud">
+      <div class="hud-left">
+        <div class="hud-item">
+          <span class="hud-icon">🏆</span>
+          <span class="hud-label">BEST</span>
+          <span class="hud-value" id="hud-best">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-icon">📊</span>
+          <span class="hud-label">SCORE</span>
+          <span class="hud-value" id="hud-score">0</span>
+        </div>
+      </div>
+      <div class="hud-center">
+        <div class="game-title">Dino<span class="plus">rush</span></div>
+      </div>
+      <div class="hud-right">
+        <div class="hud-item">
+          <span class="hud-icon">🪙</span>
+          <span class="hud-label">COINS</span>
+          <span class="hud-value" id="hud-coins">0</span>
+        </div>
+        <div class="hud-item difficulty-item">
+          <span class="diff-badge" id="diff-badge">NORMAL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Canvas Area -->
+    <div class="canvas-container">
+      <canvas id="game-canvas" width="900" height="300"></canvas>
+
+      <!-- Start Screen -->
+      <div class="overlay" id="start-screen">
+        <div class="overlay-content">
+          <div class="overlay-dino">🦖</div>
+          <h1 class="overlay-title">Dino<span class="plus">rush</span></h1>
+          <p class="overlay-sub">Enhanced Chrome Dino Experience</p>
+          <div class="controls-hint">
+            <div class="hint-row"><kbd>Space</kbd> or <kbd>↑</kbd> Jump</div>
+            <div class="hint-row"><kbd>↓</kbd> Duck</div>
+          </div>
+          <button class="play-btn" id="start-btn">Press Space to Start</button>
+        </div>
+      </div>
+
+      <!-- Game Over Screen -->
+      <div class="overlay hidden" id="gameover-screen">
+        <div class="overlay-content gameover-content">
+          <div class="go-icon">💀</div>
+          <h2 class="go-title">Game Over</h2>
+          <div class="go-stats">
+            <div class="go-stat">
+              <div class="go-stat-label">Score</div>
+              <div class="go-stat-value" id="go-score">0</div>
+            </div>
+            <div class="go-divider"></div>
+            <div class="go-stat">
+              <div class="go-stat-label">Best</div>
+              <div class="go-stat-value" id="go-best">0</div>
+            </div>
+            <div class="go-divider"></div>
+            <div class="go-stat coins-stat">
+              <div class="go-stat-label">🪙 Earned</div>
+              <div class="go-stat-value gold" id="go-coins">+0</div>
+            </div>
+          </div>
+          <div class="new-best-banner hidden" id="new-best-banner">
+            🎉 New Best Score!
+          </div>
+          <div class="go-actions">
+            <button class="play-btn" id="restart-btn">
+              <span>▶ Play Again</span>
+            </button>
+            <button class="secondary-btn" id="shop-link-btn">🛒 Shop</button>
+          </div>
+          <p class="go-hint">Press <kbd>R</kbd> to restart</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Controls Info -->
+    <div class="controls-bar">
+      <span><kbd>Space</kbd>/<kbd>↑</kbd> Jump</span>
+      <span><kbd>↓</kbd> Duck</span>
+      <span><kbd>R</kbd> Restart</span>
+    </div>
+  </div>
+
+    <div class="sound-wrapper">
+
+  <button id="soundBtn">🔊</button>
+
+  <div id="volumePanel" class="volume-panel hidden">
+    <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1">
+  </div>
+
+</div>
+  
+
+  <script src="../storage/storage.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

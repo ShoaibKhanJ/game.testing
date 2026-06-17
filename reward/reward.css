@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1b1b3a, #0a0a14);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* MAIN CONTAINER */
+.container {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(108, 99, 255, 0.15);
+}
+
+/* TITLE / INFO */
+#info {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+/* WHEEL */
+#wheel {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 6px solid rgba(108, 99, 255, 0.8);
+  background: conic-gradient(
+    #22c55e 0deg 72deg,
+    #38bdf8 72deg 144deg,
+    #a78bfa 144deg 216deg,
+    #f59e0b 216deg 288deg,
+    #ef4444 288deg 360deg
+  );
+
+  box-shadow:
+    0 0 25px rgba(108, 99, 255, 0.4),
+    inset 0 0 20px rgba(0, 0, 0, 0.4);
+
+  transition: transform 5s cubic-bezier(0.12, 0.8, 0.18, 1);
+  position: relative;
+}
+
+/* CENTER DOT (important UX detail) */
+#wheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px white;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.45);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* TEXT FEEDBACK */
+#result {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #facc15;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+}
+
+#timer {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.7;
+}

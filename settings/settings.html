@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinorush Settings</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body class="theme-dark">
+  <div class="page-wrapper">
+    <header class="page-header">
+      <a href="../game/game.html" class="back-btn" id="back-btn">← Back</a>
+      <div class="header-logo">🦖 Dino<span class="plus">rush</span> Settings</div>
+      <div class="placeholder"></div>
+    </header>
+
+    <!-- Toast -->
+    <div class="toast hidden" id="toast"></div>
+
+    <main class="settings-main">
+
+      <!-- Difficulty Section -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="card-icon">⚡</div>
+          <div class="card-title-group">
+            <div class="card-title">Difficulty</div>
+            <div class="card-subtitle">Affects game speed, spawn rate, and coin rewards</div>
+          </div>
+        </div>
+        <div class="option-group" id="difficulty-group">
+          <button class="option-btn" data-value="easy" data-group="difficulty">
+            <div class="option-main">
+              <div class="option-name">Easy</div>
+              <div class="option-desc">Slow speed · Fewer obstacles · ×1 coins</div>
+            </div>
+            <div class="option-badge easy-badge">Relaxed</div>
+          </button>
+          <button class="option-btn" data-value="normal" data-group="difficulty">
+            <div class="option-main">
+              <div class="option-name">Normal</div>
+              <div class="option-desc">Balanced speed · Standard obstacles · ×1.5 coins</div>
+            </div>
+            <div class="option-badge normal-badge">Balanced</div>
+          </button>
+          <button class="option-btn" data-value="hard" data-group="difficulty">
+            <div class="option-main">
+              <div class="option-name">Hard</div>
+              <div class="option-desc">Fast speed · Dense obstacles · ×2 coins</div>
+            </div>
+            <div class="option-badge hard-badge">Challenge</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Theme Section -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="card-icon">🎨</div>
+          <div class="card-title-group">
+            <div class="card-title">Theme</div>
+            <div class="card-subtitle">Changes the look across the entire extension</div>
+          </div>
+        </div>
+        <div class="option-group" id="theme-group">
+          <button class="option-btn" data-value="dark" data-group="theme">
+            <div class="theme-preview dark-preview">
+              <div class="preview-bar"></div>
+              <div class="preview-dots">
+                <div class="preview-dot"></div>
+                <div class="preview-dot"></div>
+                <div class="preview-dot"></div>
+              </div>
+            </div>
+            <div class="option-main">
+              <div class="option-name">Dark</div>
+              <div class="option-desc">Easy on the eyes at night</div>
+            </div>
+          </button>
+          <button class="option-btn" data-value="light" data-group="theme">
+            <div class="theme-preview light-preview">
+              <div class="preview-bar"></div>
+              <div class="preview-dots">
+                <div class="preview-dot"></div>
+                <div class="preview-dot"></div>
+                <div class="preview-dot"></div>
+              </div>
+            </div>
+            <div class="option-main">
+              <div class="option-name">Light</div>
+              <div class="option-desc">Bright and crisp for daytime</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+
+<div class="volume-control">
+  🔊 Volume
+  <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+</div>
+
+      <!-- Stats / About -->
+      <div class="settings-card">
+        <div class="card-header">
+          <div class="card-icon">📊</div>
+          <div class="card-title-group">
+            <div class="card-title">Stats</div>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-row">
+            <div class="stat-name">🏆 Best Score</div>
+            <div class="stat-val" id="stat-best">0</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-name">🪙 Total Coins</div>
+            <div class="stat-val" id="stat-coins">0</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-name">🎭 Skins Owned</div>
+            <div class="stat-val" id="stat-skins">1</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-name">🦖 Active Skin</div>
+            <div class="stat-val" id="stat-skin-name">Classic</div>
+          </div>
+        </div>
+        <div class="reset-zone">
+          <button class="reset-btn" id="reset-btn">Reset All Data</button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="about-card">
+        <div class="about-logo">🦖 Dino<span class="plus">rush</span></div>
+        <div class="about-version">Version 1.0.0</div>
+        <div class="about-desc">An enhanced Chrome Dino experience with skins, coins, and progression. Built with ♥ using vanilla JS.</div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../storage/storage.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

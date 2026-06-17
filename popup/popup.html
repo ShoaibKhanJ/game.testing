@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinorush</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body class="theme-dark">
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">🦖</div>
+        <div class="logo-text">
+          <span class="logo-name">Dino</span><span class="logo-plus">rush</span>
+        </div>
+      </div>
+      <div class="version-badge">v1.0</div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">🪙</div>
+        <div class="stat-info">
+          <div class="stat-value" id="coins-display">0</div>
+          <div class="stat-label">Coins</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-info">
+          <div class="stat-value" id="highscore-display">0</div>
+          <div class="stat-label">Best Score</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Skin Preview -->
+    <div class="skin-preview-card">
+      <div class="skin-canvas-wrap">
+        <canvas id="skin-preview" width="80" height="60"></canvas>
+      </div>
+      <div class="skin-info">
+        <div class="skin-label">Active Skin</div>
+        <div class="skin-name" id="skin-name-display">Classic Dino</div>
+        <div class="difficulty-badge" id="difficulty-badge">Normal</div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+      <button class="btn btn-primary" id="play-btn">
+        <span class="btn-icon">▶</span>
+        Play Game
+      </button>
+      <div class="secondary-actions">
+        <button class="btn btn-secondary" id="shop-btn">
+          <span class="btn-icon">🛒</span>
+          Shop
+        </button>
+        <button class="btn btn-secondary" id="settings-btn">
+          <span class="btn-icon">⚙</span>
+          Settings
+        </button>
+        <button class="btn btn-secondary" id="reward-btn">
+          <span class="btn-icon">🎁</span>
+          Reward
+        </button>
+        <button class="btn btn-secondary" id="muteBtn" class="icon-btn"> Coming Soon </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../storage/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>

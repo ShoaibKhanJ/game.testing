@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinorush Shop</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+
+<body class="theme-dark">
+  <div class="page-wrapper">
+    <!-- Page Header -->
+    <header class="page-header">
+      <a href="../game/game.html" class="back-btn" id="back-btn">← Back</a>
+      <div class="header-logo">🦖 Dino<span class="plus">rush</span> Shop</div>
+      <div class="coin-balance">
+        <span class="coin-icon">🪙</span>
+        <span id="balance-display">0</span>
+      </div>
+    </header>
+
+    <!-- Toast notification -->
+    <div class="toast hidden" id="toast"></div>
+
+    <!-- Shop Grid -->
+    <main class="shop-main">
+      <div class="section-title">Dinosaur Skins</div>
+      <div class="skins-grid" id="skins-grid">
+        <!-- Populated by JS -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Skin Modal Preview -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Skin Name</h3>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+      <div class="modal-preview">
+        <canvas id="modal-canvas" width="160" height="120"></canvas>
+      </div>
+      <div class="modal-info">
+        <div class="modal-price" id="modal-price"></div>
+        <div class="modal-status" id="modal-status"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-modal-buy hidden" id="modal-buy-btn">Buy Now</button>
+        <button class="btn-modal-select hidden" id="modal-select-btn">Equip Skin</button>
+        <button class="btn-modal-active hidden" id="modal-active-btn">✓ Equipped</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <a href="../reward/reward.html" class="daily-reward-btn">
+  🎁 Daily Reward
+</a> -->
+
+  <script src="../storage/storage.js"></script>
+  <script src="shop.js"></script>
+</body>
+
+</html>
